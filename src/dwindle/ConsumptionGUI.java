@@ -15,12 +15,11 @@ public class ConsumptionGUI extends javax.swing.JFrame {
     public ConsumptionGUI() {
         initComponents();
         
-        // update player stats
+        // display player stats
         resourceLabel.setText("Resources: " + Stats.resources);
         resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
         healthLabel.setText("Player Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);
-        
+        dayLabel.setText("Day: " + Stats.day);     
     }
 
     /**
@@ -176,6 +175,8 @@ public class ConsumptionGUI extends javax.swing.JFrame {
             Stats.resourceDice--;
             int incr = (int) (Math.random()*6+1);
             Stats.resources += incr;
+            
+            //update stats on GUI
             resourceLabel.setText("Resources: " + Stats.resources);
             resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
             jLabel4.setText("You have gained " + incr + " resources.");
@@ -183,7 +184,6 @@ public class ConsumptionGUI extends javax.swing.JFrame {
         else{
             jLabel4.setText("You do not have any more resource dice to spend.");
         }
-
     }//GEN-LAST:event_eatButtonActionPerformed
 
     private void finishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishButtonActionPerformed

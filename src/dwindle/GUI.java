@@ -22,8 +22,6 @@ public class GUI extends javax.swing.JFrame {
         EventDeck deck = new EventDeck();
         EventDeck.currentCard = deck.deal();
         
-        
-        
         Stats.day++;
         
         //Update GUI Information
@@ -39,7 +37,7 @@ public class GUI extends javax.swing.JFrame {
         choice4Button.setText(EventDeck.currentCard.getOption4());
         
     }
-    EventMechanics ev = new EventMechanics();
+    EventMechanics eventMech = new EventMechanics();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -193,7 +191,7 @@ public class GUI extends javax.swing.JFrame {
     private void choice1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice1ButtonActionPerformed
 
         decision = 1;
-        ev.Choice1();
+        eventMech.Choice1();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
@@ -202,7 +200,7 @@ public class GUI extends javax.swing.JFrame {
     private void choice2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice2ButtonActionPerformed
 
         decision = 2;
-        ev.Choice2();
+        eventMech.Choice2();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
@@ -211,7 +209,7 @@ public class GUI extends javax.swing.JFrame {
     private void choice3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice3ButtonActionPerformed
 
         decision = 3;
-        ev.Choice3();
+        eventMech.Choice3();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
@@ -220,7 +218,7 @@ public class GUI extends javax.swing.JFrame {
     private void choice4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice4ButtonActionPerformed
 
         decision = 4;
-        ev.Choice4();
+        eventMech.Choice4();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();

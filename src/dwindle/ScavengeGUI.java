@@ -18,6 +18,7 @@ public class ScavengeGUI extends javax.swing.JFrame {
         day.setText("Day: " + Stats.day);
         
     }
+    
     ScavengeMechanics sc = new ScavengeMechanics();
     /**
      * This method is called from within the constructor to initialize the form.
