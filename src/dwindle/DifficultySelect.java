@@ -71,7 +71,7 @@ public class DifficultySelect extends javax.swing.JFrame {
                     .addContainerGap()))
         );
 
-        normalButton.setBackground(new java.awt.Color(51, 0, 51));
+        normalButton.setBackground(new java.awt.Color(255, 255, 255));
         normalButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         normalButton.setText("Normal");
         normalButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class DifficultySelect extends javax.swing.JFrame {
             }
         });
 
-        hardButton.setBackground(new java.awt.Color(51, 0, 51));
+        hardButton.setBackground(new java.awt.Color(255, 255, 255));
         hardButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         hardButton.setText("Hard");
         hardButton.addActionListener(new java.awt.event.ActionListener() {

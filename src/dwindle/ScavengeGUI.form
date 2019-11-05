@@ -94,9 +94,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="forestButton" max="32767" attributes="0"/>
+                      <Component id="forestButton" pref="24" max="32767" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" max="32767" attributes="0"/>
+                      <Component id="jLabel2" pref="17" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -108,7 +108,7 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel5" max="32767" attributes="0"/>
+                  <Component id="jLabel5" pref="21" max="32767" attributes="0"/>
                   <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
@@ -122,7 +122,7 @@
                   <Component id="jLabel8" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-              <Component id="jLabel7" max="32767" attributes="0"/>
+              <Component id="jLabel7" pref="20" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -144,13 +144,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="resources" max="32767" attributes="0"/>
+                  <Component id="resources" pref="73" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Component id="resourceDice" max="32767" attributes="0"/>
+                  <Component id="resourceDice" pref="95" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Component id="playerHealth" max="32767" attributes="0"/>
+                  <Component id="playerHealth" pref="89" max="32767" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  <Component id="day" max="32767" attributes="0"/>
+                  <Component id="day" pref="38" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -225,7 +225,7 @@
     <Component class="javax.swing.JButton" name="forestButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="0" red="33" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="0" red="33" type="rgb"/>
@@ -249,7 +249,7 @@
     <Component class="javax.swing.JButton" name="suburbButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="0" red="33" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Suburbs"/>
       </Properties>
@@ -270,7 +270,7 @@
     <Component class="javax.swing.JButton" name="cityButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="0" red="33" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="City"/>
       </Properties>
@@ -294,7 +294,7 @@
     <Component class="javax.swing.JButton" name="homeButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="0" red="33" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Stay Home"/>
       </Properties>

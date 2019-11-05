@@ -41,7 +41,7 @@ public class StartScreen extends javax.swing.JFrame {
         jLabel1.setText("DWINDLE");
         jLayeredPane1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 210, 80));
 
-        jButton1.setBackground(new java.awt.Color(51, 0, 51));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

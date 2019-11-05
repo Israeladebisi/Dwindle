@@ -114,7 +114,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
                 .addGap(23, 23, 23))
         );
 
-        nextDayButton.setBackground(new java.awt.Color(51, 0, 51));
+        nextDayButton.setBackground(new java.awt.Color(255, 255, 255));
         nextDayButton.setText("Next Day");
         nextDayButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

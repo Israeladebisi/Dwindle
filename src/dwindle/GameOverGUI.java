@@ -38,7 +38,7 @@ public class GameOverGUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 0, 51));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Game Over");
 

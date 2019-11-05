@@ -55,9 +55,9 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
                           <Component id="finishButton" pref="0" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -68,14 +68,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel1" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                  <Component id="jLabel1" max="32767" attributes="0"/>
+                  <Component id="jLabel1" pref="21" max="32767" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" max="32767" attributes="0"/>
+                  <Component id="jLabel2" pref="23" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                   <Component id="eatButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="finishButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="finishButton" alignment="0" pref="30" max="32767" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -97,7 +97,7 @@
         <Component class="javax.swing.JButton" name="finishButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="33" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="33" type="rgb"/>
@@ -111,7 +111,7 @@
         <Component class="javax.swing.JButton" name="eatButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="33" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="33" type="rgb"/>
@@ -136,13 +136,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="resourceLabel" max="32767" attributes="0"/>
+                      <Component id="resourceLabel" pref="74" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="resourceDiceLabel" max="32767" attributes="0"/>
+                      <Component id="resourceDiceLabel" pref="98" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="healthLabel" max="32767" attributes="0"/>
+                      <Component id="healthLabel" pref="94" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="dayLabel" max="32767" attributes="0"/>
+                      <Component id="dayLabel" pref="44" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>

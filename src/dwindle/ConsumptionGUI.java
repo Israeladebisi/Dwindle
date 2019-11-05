@@ -50,7 +50,7 @@ public class ConsumptionGUI extends javax.swing.JFrame {
 
         jLabel2.setText("For every resource under 4, a damage will be dealth");
 
-        finishButton.setBackground(new java.awt.Color(51, 0, 51));
+        finishButton.setBackground(new java.awt.Color(255, 255, 255));
         finishButton.setForeground(new java.awt.Color(51, 0, 51));
         finishButton.setText("Finish");
         finishButton.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class ConsumptionGUI extends javax.swing.JFrame {
             }
         });
 
-        eatButton.setBackground(new java.awt.Color(51, 0, 51));
+        eatButton.setBackground(new java.awt.Color(255, 255, 255));
         eatButton.setForeground(new java.awt.Color(51, 0, 51));
         eatButton.setText("Use Consumption Dice!");
         eatButton.addActionListener(new java.awt.event.ActionListener() {
@@ -88,13 +88,13 @@ public class ConsumptionGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addGap(31, 31, 31)
-                .addComponent(resourceDiceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(resourceDiceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                 .addGap(44, 44, 44)
-                .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                 .addGap(43, 43, 43)
-                .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                 .addGap(34, 34, 34))
         );
         jPanel1Layout.setVerticalGroup(
@@ -134,23 +134,23 @@ public class ConsumptionGUI extends javax.swing.JFrame {
                         .addGap(166, 166, 166))
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
-                        .addGap(317, 317, 317)
+                        .addGap(269, 269, 269)
                         .addComponent(finishButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(41, 41, 41))))
+                        .addGap(89, 89, 89))))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(77, 77, 77)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addGap(71, 71, 71)
                 .addComponent(eatButton)
                 .addGap(18, 18, 18)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(finishButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(finishButton, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(jLabel4))
                 .addContainerGap())
         );
