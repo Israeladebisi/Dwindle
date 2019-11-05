@@ -1,11 +1,19 @@
-Test Title 3
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Attack
+You didn't think the day would come, but it did. The sound of a metal bat slamming into your reinforced door. Even with the lcoks in place and the general thickness of the wood and metal, it seems whoever is desperate to get in has an ample amount of strength to work at it. It doesn't seem like he knows you're in here, though revealing that could have any number of consequences.
+Shout to him that this shelter is taken
+Open your door to him with generosity
+Remain silent
+Offer him something to leave
+There is a momentary pause as the news of someone already in the shelter hits the assailant. However, it seems to have the opposite effect as whoever is assaulting your shelter redoubles their efforts. It goes on for many, many hours, until finally they leave. The day is wasted.
+The look of shock on the assailant's face as you fling your door open is a sight to behold, and the brief standoff as you stand there might be the longest moments of your life. Slowly, the assailant asks if he can stay the night, though he doesn't let the bat go. You find out later that he left you some boxes of pills he probably foraged from the city as thanks for the kindness.
+It takes an hour, maybe a bit more, but eventually the assailant gives up. The last blow is the metal bat itself being thrown at your shelter in frustration as they storm off. When you emerge, you find the bat in working shape, a useful resource should another confrontation occur.
+You quickly take some food you've been saving and crack the barred windows open to throw it to the assailant. The impact of the bat hitting the bars and your fingers elicits a yelp of pain as you quickly re-lock the windows as shouts, clangs, and curses are muffled by your shelter.
+0
+3
+1
+-2
+Resources
+Resources
+Resources
+Health
+Death

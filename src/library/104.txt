@@ -1,11 +1,19 @@
-Test Title 4
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Sickness
+It was bound to happen. Your head throbbing, your muscles aching, and so much snot in your throat that you wonder if you'll suffocate in your sleep. But which pills do you take? In the mass of plastic baggies and unmarked containers, who knows what will help, and what's gonna make things worse.
+Take the red pills
+Tough it out
+Take the blue pills
+Take both red and blue pills
+Oh god. Oh god. Bad choice. The headaches are now gongs in your head, each pump of blood from your heart symbols crashing against your ears. Chills take you, and you wonder if you'll be strong enough to survive it.
+Sometimes the immune system just needs time to work. It sucks, it hurts, but as you fall in and out of sleep, you can feel your fever dropping.
+That's better. You can feel your body sinking into a warm stupor, but when you wake up you find that you feel good enough to do some work inside your shelter today. 
+Why....You remember thinking that to yourself as you descend into a sweaty, fever-induced mess. Breathing is hard. Swallowing is hard. You've soiled the padded area where you sleep. If you ever wake up from this nightmare, its gonna be rough getting back to normal.
+-3
+-1
+0
+-5
+Health
+Health
+Health
+Health
+Sickness

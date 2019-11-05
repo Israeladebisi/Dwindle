@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dwindle;
 
 /**
@@ -16,11 +11,7 @@ public class GUI2 extends javax.swing.JFrame {
      */
     public GUI2() {
         initComponents();
-        
-        
-        
-        
-        
+
         /*
             Update Stats
         */
@@ -29,7 +20,31 @@ public class GUI2 extends javax.swing.JFrame {
         playerHealth.setText("Player Health: " + Stats.health);
         day.setText("Day: " + Stats.day);
         
+        if(GUI.decision == 1){
+            reactionText.setText(EventDeck.currentCard.getReaction1());
+        }
+        else if(GUI.decision == 2){
+            reactionText.setText(EventDeck.currentCard.getReaction2());
+        }
+        else if(GUI.decision == 3){
+            reactionText.setText(EventDeck.currentCard.getReaction3());
+        }
+        else{
+            reactionText.setText(EventDeck.currentCard.getReaction4());
+        }
+
         
+        String word = "";
+        if(EventMechanics.val < 0){
+            word = "lost";
+        }
+        else{
+            word = "gained";
+        }
+        
+        jLabel3.setText("You have " + word +" "+ EventMechanics.val + " " + EventMechanics.factor);
+        
+        /*     
         switch (GUI.decision) {
             case 1:
                 reactionText.setText(EventDeck.currentCard.getReaction1());
@@ -50,13 +65,11 @@ public class GUI2 extends javax.swing.JFrame {
             default:
                 break;
         }
-        
+        */
         /*
             Diplay updates
         */
-        jLabel3.setText("You have...");
-        
-        
+        //jLabel3.setText("You have...");  
     }
 
     /**
@@ -79,6 +92,11 @@ public class GUI2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        resourceLabel = new javax.swing.JLabel();
+        resourceDieLabel = new javax.swing.JLabel();
+        healthLabel = new javax.swing.JLabel();
+        dayLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +107,7 @@ public class GUI2 extends javax.swing.JFrame {
         reactionText.setWrapStyleWord(true);
         jScrollPane1.setViewportView(reactionText);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton1.setText("Scavenge Phase");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +116,47 @@ public class GUI2 extends javax.swing.JFrame {
         });
 
         jLabel3.setText("jLabel3");
+
+        jPanel1.setBackground(new java.awt.Color(51, 0, 51));
+
+        resourceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        resourceLabel.setText("Resource: 4");
+
+        resourceDieLabel.setForeground(new java.awt.Color(255, 255, 255));
+        resourceDieLabel.setText("Resource Die: 11");
+
+        healthLabel.setForeground(new java.awt.Color(255, 255, 255));
+        healthLabel.setText("Health: 8");
+
+        dayLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dayLabel.setText("Day: 10");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addComponent(resourceDieLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(73, 73, 73)
+                .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(46, 46, 46))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(resourceDieLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(49, 49, 49))
+        );
 
         jLayeredPane1.setLayer(resources, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(resourceDice, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -107,53 +167,64 @@ public class GUI2 extends javax.swing.JFrame {
         jLayeredPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(resources)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addComponent(resources)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(resourceDice)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(playerHealth)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(day))
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel3)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addComponent(resourceDice)
-                        .addGap(18, 18, 18)
-                        .addComponent(playerHealth)
-                        .addGap(18, 18, 18)
-                        .addComponent(day))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3))))
-                .addContainerGap(338, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                            .addComponent(jLabel1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(resources)
                     .addComponent(day)
                     .addComponent(resourceDice)
                     .addComponent(playerHealth))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addGap(21, 21, 21)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -215,15 +286,20 @@ public class GUI2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel day;
+    private javax.swing.JLabel dayLabel;
+    private javax.swing.JLabel healthLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel playerHealth;
     private javax.swing.JTextArea reactionText;
     private javax.swing.JLabel resourceDice;
+    private javax.swing.JLabel resourceDieLabel;
+    private javax.swing.JLabel resourceLabel;
     private javax.swing.JLabel resources;
     // End of variables declaration//GEN-END:variables
 }

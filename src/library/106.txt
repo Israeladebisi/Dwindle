@@ -1,11 +1,19 @@
-Test Title 6
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Injury
+Careless was always going to show up one way or another. The bleeding gauge in your arm is enough motivation for you to commit to not be as stupid in the future. But you need to tend to the present. Back in your shelter, you start sifting through your supplies.
+Use the "bare minimum" to fix you up
+Use everything and anything to patch you up
+Decide you can tough it out
+You remember a move once where the main character forcibly cauterized the wound with heated metal...
+Maybe you skimped a bit too much. 
+You feel much better, but are definitely going to need to track down more supplies.
+You're a bit light headed, and the tenderness of the wound is concerning. It hurts, and definitely gets in the way, causing a few more minor injuries for your trouble.
+It was a bad idea in retrospect. And you have the infection and burns to prove it now.
+-1
+-5
+-2
+-3
+Health
+Resources
+Health
+Health
+Death

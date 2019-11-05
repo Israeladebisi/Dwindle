@@ -1,11 +1,19 @@
-Test Title 7
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Gas Station
+You remember this being a remote gas station owned by a retired couple. Weren't the friendliest people, but always had a great selection of energy drinks of chips. Most of the shelves have been cleared, but you did find a locked desk in the back that no one has cracked yet. After a few hours working on it, you feel that its about ready to pop open. But then you hear something. Maybe its your paranoia, maybe its something concerning. It sound like footsteps, quiet ones that are trying to sneak up on you.
+Get out of there
+Get that Desk open
+Wait
+Loudly start to sing
+You're out of that station, with all the strength your legs can muster. You don't look back, you don't stop to listen. Anything is better than meeting someone who may want to harm you.
+Dismissing the sounds, you keep prying the desk apart and eventually manage it. Sweat from your brow, you stash your haul into your sack and peer out into the store. You don't see anything that could have made the noise, and with your prize acquired, you don't intent to wait around to find out if it does exist.
+You pause nervously, the only sound is the wheezing of your lungs the whistle of your nose as you breathe as quietly as you can. The tension gets to you and you decide to take the small bits you found before and leave the desk for another day.
+The joy of music. Ain't nothing like it. As you merrily rip the desk apart, you find comfort in making the sweetest of melodies as your spirits are bolstered.
+0
+3
+1
+1
+Resources
+Resources
+Resources
+Health
+Gas Station

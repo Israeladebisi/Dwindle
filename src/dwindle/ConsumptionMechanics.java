@@ -10,6 +10,9 @@ package dwindle;
  * @author YuTsai
  */
 public class ConsumptionMechanics {
+    
+    
+    
     /*
     This class will handle the consumption phase.
     

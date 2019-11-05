@@ -1,31 +1,62 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dwindle;
 
 /**
- *
  * @author YuTsai
  */
 public class ScavengeMechanics {
+    public static int amount;
+    
     
     /*
-    This class holds the consistent functions made during the Scavenge phase.
-    
-    Methods Needed:
-        Forest
-            This will call 80 percent chance to earn a small amount of resources
-        
-        Suburbs
-            This will call a 60 percent chance to earn a medium amount of resources
-    
-        City
-            This will call a 20 percent chance to earn of huge amount of resources
-    
-        Nothing
-            Will load a snarky message dependant on current health and resources available
+        80% chance of success, 2+1 max able to find
     */
+    public void forestMech(){
+        int chance = (int) (Math.random()*10+1);
+        amount = (int) (Math.random()*2+1);
+        
+        if(chance <= 8){
+            Stats.resourceDice += amount;
+        }
+        else{
+            amount = 0;
+        }
+    }
     
+    /*
+        50% chance of success, 5+1 max able to find
+    */
+    public void suburbMech(){
+        int chance = (int) (Math.random()*10+1);
+        amount = (int) (Math.random()*5+1);
+        
+        if(chance <= 5){
+            Stats.resourceDice += amount;
+        }
+        else{
+            amount = 0;
+        }
+    }
+    
+    /*
+        20% chance of success, 10+1 max able to find
+    */
+    public void cityMech(){
+        int chance = (int) (Math.random()*10+1);
+        amount = (int) (Math.random()*10+1);
+        
+        if(chance <= 2){
+            Stats.resourceDice += amount;
+        }
+        else{
+            amount = 0;
+        }
+    }
+    
+    /*
+        100% regain 1 Health
+    */
+    public void restMech(){
+        Stats.health += 1;
+        amount = 999;
+    }  
 }

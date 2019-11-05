@@ -1,11 +1,19 @@
-Test Title 5 
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Heavy Rain
+At first it sound like normal weather, but you swear when storm picks up it sounds like hails of bullets against the metal plating that makes up your roof. Slowly but surely, water starts leaking into the shelter. Shoddy craftsmanship from the lowest bidder, what do you expect? A choice has to be made here, how much you're willing to give to save from the inevitable mold and damp of the soon to be drenched shelter.
+Put yourself in waters to make sure your resources are out of the rain
+Stay dry, stay high, keep your body warm and healthy
+Use some resources to dam the leaks and mop the mess
+Go out and enjoy the rain. Its these rare times where you experience nature's majesty.
+You're going to need the resources, so if you get a little banged up along the way, its worth it.
+You only have one body, and if you have to forage extra hard later to make sure you're okay now, its worth it.
+You do your best to dam up the leaks, and it seems to work. It takes time, but eventually, you find that your proactive nature paid off, only losing a bit of your stock.
+You catch a cold. Yes, I'm serious.
+-1
+-4
+-2
+-2
+Health
+Resources
+Resources
+Health
+Heavy Rain

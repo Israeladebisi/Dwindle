@@ -1,11 +1,19 @@
-Test Title 8
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+Cold
+The air is cold, its like a vicous wolf snapping at your throat with every breath you take. You huddle in the corner, damp blankets over your shoulder, and the last your firewood slowly burning out. You glance to the walls, and can feel your fingers rub into your palm as you see all the burnable supplies you could use to thaw out your frozen body. Without that, tonight's numbing slumber could be your last.
+Fall asleep
+Toss just some supplies onto the fire
+Try and dry your blanket before the fire goes out
+Bring the fire to a roaring blaze
+You drift off into slumber, your eyes failing you. Eventually, you do wake up, but the pain in your throat and the shiver in your spine definitely warns you of the state of your body. Your mind is in a haze, as you fight to stay conscious.
+Its worth it, and the cold is a great motivator to feed whatever the fire demands to stay alight. Its enough to keep the cold at bay, though it did cost some.
+Maybe if you at least a dry blanket, the cold would be tolerable. But as you try and drape the blanket over the dying flame, it is enough to snuff it out. So you sit, with a smoldering pile, a damp blanket, and a scream frozen in the back of your throat.
+Your skin turns into a flushed pink as you breathe in the warm air of the now lively fire. So what if you had to use a lot of what you've saved. Its worth it, so worth it to keep the biting chill at bay.
+-2
+-1
+-3
+-4
+Health
+Resources
+Health
+Resources
+Cold

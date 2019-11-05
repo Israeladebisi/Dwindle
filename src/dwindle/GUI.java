@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dwindle;
 
 import java.io.IOException;
@@ -24,30 +19,27 @@ public class GUI extends javax.swing.JFrame {
     public GUI() throws IOException{
         initComponents();
         
-        EventDeck.currentCard = Dwindle.mainDeck.loadRandomCard();
+        EventDeck deck = new EventDeck();
+        EventDeck.currentCard = deck.deal();
         
-        /*
-        int triggerArray = Stats.day;
-        triggerArray = triggerArray;
-        EventCard.foundTriggers[triggerArray] = EventCard.getTriggerWords();
-        System.out.println(EventCard.foundTriggers.toString());
-        */
+        
         
         Stats.day++;
         
-        resources.setText("Resources: " + Stats.resources);
-        resourceDice.setText("Resource Dice: " + Stats.resourceDice);
-        playerHealth.setText("Player Health: " + Stats.health);
-        day.setText("Day: " + Stats.day);
+        //Update GUI Information
+        resourceLabel.setText("Resources: " + Stats.resources);
+        resourceDieLabel.setText("Resource Dice: " + Stats.resourceDice);
+        healthLabel.setText("Player Health: " + Stats.health);
+        dayLabel.setText("Day: " + Stats.day);
         
-        eventStory.setText(EventDeck.currentCard.getStory());
+        jTextArea1.setText(EventDeck.currentCard.getStory());
         choice1Button.setText(EventDeck.currentCard.getOption1());
         choice2Button.setText(EventDeck.currentCard.getOption2());
         choice3Button.setText(EventDeck.currentCard.getOption3());
         choice4Button.setText(EventDeck.currentCard.getOption4());
         
     }
-
+    EventMechanics ev = new EventMechanics();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -57,28 +49,63 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nextPhaseButton = new javax.swing.JButton();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        resources = new javax.swing.JLabel();
-        resourceDice = new javax.swing.JLabel();
-        day = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        resourceLabel = new javax.swing.JLabel();
+        resourceDieLabel = new javax.swing.JLabel();
+        healthLabel = new javax.swing.JLabel();
+        dayLabel = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         choice1Button = new javax.swing.JButton();
         choice2Button = new javax.swing.JButton();
         choice3Button = new javax.swing.JButton();
         choice4Button = new javax.swing.JButton();
-        playerHealth = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        eventStory = new javax.swing.JTextArea();
-
-        nextPhaseButton.setText("Next Phase");
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        resources.setText("Resources: 5");
+        jPanel2.setBackground(new java.awt.Color(51, 0, 51));
 
-        resourceDice.setText("Resource Dice: 2");
+        resourceLabel.setForeground(new java.awt.Color(255, 255, 255));
+        resourceLabel.setText("Resource: 4");
 
-        day.setText("Day: 1");
+        resourceDieLabel.setForeground(new java.awt.Color(255, 255, 255));
+        resourceDieLabel.setText("Resource Die: 11");
+
+        healthLabel.setForeground(new java.awt.Color(255, 255, 255));
+        healthLabel.setText("Health: 8");
+
+        dayLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dayLabel.setText("Day: 10");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addComponent(resourceDieLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(73, 73, 73)
+                .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(46, 46, 46))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(resourceDieLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(49, 49, 49))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(51, 0, 51));
 
         choice1Button.setText("Give him some food (lose one resource dice)");
         choice1Button.addActionListener(new java.awt.event.ActionListener() {
@@ -108,114 +135,92 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        playerHealth.setText("Player Health: 10");
-
-        eventStory.setEditable(false);
-        eventStory.setColumns(20);
-        eventStory.setLineWrap(true);
-        eventStory.setRows(5);
-        eventStory.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(eventStory);
-
-        jLayeredPane1.setLayer(resources, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(resourceDice, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(day, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(choice1Button, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(choice2Button, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(choice3Button, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(choice4Button, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(playerHealth, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(choice3Button)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(resources)
-                        .addGap(18, 18, 18)
-                        .addComponent(resourceDice)
-                        .addGap(18, 18, 18)
-                        .addComponent(playerHealth)
-                        .addGap(18, 18, 18)
-                        .addComponent(day))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(choice1Button)
                     .addComponent(choice2Button)
+                    .addComponent(choice3Button)
                     .addComponent(choice4Button))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGap(307, 307, 307))
         );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(resources)
-                    .addComponent(day)
-                    .addComponent(resourceDice)
-                    .addComponent(playerHealth))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(choice1Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(choice2Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(choice3Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(choice4Button))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(choice4Button)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void choice1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice1ButtonActionPerformed
-        // TODO add your handling code here:
-        //int diff = 5 - Integer.parseInt(EventCard.mech4);
+
         decision = 1;
-        
+        ev.Choice1();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
     }//GEN-LAST:event_choice1ButtonActionPerformed
 
     private void choice2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice2ButtonActionPerformed
-        // TODO add your handling code here:
+
         decision = 2;
-        
+        ev.Choice2();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
     }//GEN-LAST:event_choice2ButtonActionPerformed
 
     private void choice3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice3ButtonActionPerformed
-        // TODO add your handling code here:
+
         decision = 3;
-        
+        ev.Choice3();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
     }//GEN-LAST:event_choice3ButtonActionPerformed
 
     private void choice4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice4ButtonActionPerformed
-        // TODO add your handling code here:
+
         decision = 4;
-        
+        ev.Choice4();
         GUI2 gui2 = new GUI2();
         gui2.setVisible(true);
         dispose();
@@ -248,6 +253,9 @@ public class GUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -266,13 +274,13 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton choice2Button;
     private javax.swing.JButton choice3Button;
     private javax.swing.JButton choice4Button;
-    private javax.swing.JLabel day;
-    private javax.swing.JTextArea eventStory;
-    private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLabel dayLabel;
+    private javax.swing.JLabel healthLabel;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton nextPhaseButton;
-    private javax.swing.JLabel playerHealth;
-    private javax.swing.JLabel resourceDice;
-    private javax.swing.JLabel resources;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel resourceDieLabel;
+    private javax.swing.JLabel resourceLabel;
     // End of variables declaration//GEN-END:variables
 }

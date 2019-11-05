@@ -1,11 +1,19 @@
-Test Title 2
-This is where the story will be, for the purposes of this test I'm going to make this text especially longer than normally.
-Option 1 Test
-Option 2 Test
-Option 3 Test
-Option 4 Test
-System.out.println("mechanic 1 executes successfully");
-System.out.println("mechanic 2 executes successfully");
-System.out.println("mechanic 3 executes successfully");
-System.out.println("mechanic 4 executes successfully");
-TestwordisDeath
+The Lake
+Fresh water can mean the difference between life and death, which is why a tepid lake will have to do for now. As you walk along the shore and look out into the thick algae the crusts its edges, you begin to realize how useful bottled water and faucets were. Looking around, it seems to be that you're alone, and the several empty canteens you brought clang as you beign to strip down. No sense is having them freeze overnight. 
+Try filling at the shore, pushing canteens under the algae
+Swim out deeper into the lake to fill up
+Look around for a branch to clear up part of the shore
+Change your mind and look for a stream instead
+Thick, warm green mess coats your hand as you try brushing the algae to the side. After the first fill, you dump out what you've collected and find the tinted green water mildly nauseating. Then you taste it. Gross. It would do for an emergency or cooking, but you would find later that after a couple days of sitting, the water is undrinkable.
+Its cold. Cold, cold, cold. Gritting your teeth you make your way towards the less covered center of the lake. The swim back is a bit more difficult, weighed done by the half-dozen or so canteens. You may be dripping, shivering on the shore, but it was definitely worth the effort.
+A decent solution, you won't be drenched, the water should be a bit cleaner. and the trees are plentiful with the object you seek. Nothing suitable on the ground nearby, you take to a branch on a nearby tree. Pulling, tugging, you eventually splinter part of it off as your foot slips on a damp piece of moss growing at the foot of the tree. Your head cracks against the hard roots, and the dizziness stays with you for so long, you decide to head back rather than risk falling into the water.
+You only have so many hours left in the day, and despite your best efforts, you cannot locate another source of water. A day wasted, as you spend the rest of the evening finding your way back to your supplies.
+1
+5
+-3
+0
+Resources
+Resources
+Health
+Resources
+Lake
