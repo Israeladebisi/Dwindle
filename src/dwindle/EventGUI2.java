@@ -4,12 +4,12 @@ package dwindle;
  *
  * @author YuTsai
  */
-public class GUI2 extends javax.swing.JFrame {
+public class EventGUI2 extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI2
      */
-    public GUI2() {
+    public EventGUI2() {
         initComponents();
 
         /*
@@ -20,13 +20,13 @@ public class GUI2 extends javax.swing.JFrame {
         playerHealth.setText("Player Health: " + Stats.health);
         day.setText("Day: " + Stats.day);
         
-        if(GUI.decision == 1){
+        if(EventGUI.decision == 1){
             reactionText.setText(EventDeck.currentCard.getReaction1());
         }
-        else if(GUI.decision == 2){
+        else if(EventGUI.decision == 2){
             reactionText.setText(EventDeck.currentCard.getReaction2());
         }
-        else if(GUI.decision == 3){
+        else if(EventGUI.decision == 3){
             reactionText.setText(EventDeck.currentCard.getReaction3());
         }
         else{
@@ -45,7 +45,7 @@ public class GUI2 extends javax.swing.JFrame {
         jLabel3.setText("You have " + word +" "+ EventMechanics.val + " " + EventMechanics.factor);
         
         /*     
-        switch (GUI.decision) {
+        switch (EventGUI.decision) {
             case 1:
                 reactionText.setText(EventDeck.currentCard.getReaction1());
                 Stats.resources = Stats.resources/2;
@@ -137,13 +137,13 @@ public class GUI2 extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(resourceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                .addComponent(resourceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
-                .addComponent(resourceDieLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addComponent(resourceDieLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, Short.MAX_VALUE)
                 .addGap(36, 36, 36)
-                .addComponent(healthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                .addComponent(healthLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE)
                 .addGap(73, 73, 73)
-                .addComponent(dayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(dayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, Short.MAX_VALUE)
                 .addGap(46, 46, 46))
         );
         jPanel1Layout.setVerticalGroup(
@@ -253,20 +253,21 @@ public class GUI2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EventGUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EventGUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EventGUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EventGUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI2().setVisible(true);
+                new EventGUI2().setVisible(true);
             }
         });
     }

@@ -21,7 +21,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
     public ConsumptionGUI2() {
         initComponents();
         
-        GUI gui = null;
+        EventGUI gui = null;
         GameOverGUI ggui = null;
         
         resourceLabel.setText("Resources: " + Stats.resources);
@@ -174,12 +174,12 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
 
     private void nextDayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextDayButtonActionPerformed
 
-        GUI gui = null;
+        EventGUI gui = null;
         GameOverGUI ggui = null;
 
         if(Stats.dayLimit != Stats.day){
             try {
-                gui = new GUI();
+                gui = new EventGUI();
             } catch (IOException ex) {
                 Logger.getLogger(ConsumptionGUI2.class.getName()).log(Level.SEVERE, null, ex);
             }

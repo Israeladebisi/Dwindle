@@ -14,14 +14,19 @@ public class EventDeck {
     
     public static ArrayList<EventCard> eventDeck;
     
+    //constructor
     public EventDeck() throws IOException{
+        
         eventDeck = new ArrayList<>();
-        for(int i = 1; i < 9; i++){
-            String currentDirectory = System.getProperty("user.dir");
-            Buff = new BufferedReader(new FileReader(currentDirectory + "/src/library/" + (100+i) + ".txt"));
+        String currentDirectory = System.getProperty("user.dir");
+        
+        for(int i = 0; i < 8; i++){
+                
+            Buff = new BufferedReader(new FileReader(currentDirectory + "/src/library/" + (101+i) + ".txt"));
             
-            currentCard.assignValues(Buff);
-            
+            eventDeck.add(new EventCard(Buff));
+            //EventCard.assignValues(Buff);
+            /*
             eventDeck.add(new EventCard(
                     EventCard.title, EventCard.story, EventCard.option1, 
                     EventCard.option2, EventCard.option3, EventCard.option4, EventCard.reaction1,
@@ -30,7 +35,7 @@ public class EventDeck {
                     EventCard.mechAmount4, EventCard.mech1, EventCard.mech2, EventCard.mech3, 
                     EventCard.mech4, EventCard.triggerWords
                     ));
-
+            */
         }
     }
 /*
@@ -41,9 +46,7 @@ public class EventDeck {
     public EventCard deal(){     
         //shuffle();      
         int i = eventDeck.size()-1;
-        System.out.println(eventDeck.size());
-        EventCard drawn = (EventCard)eventDeck.remove(i);
-        System.out.println(eventDeck.size());
+        EventCard drawn = eventDeck.remove(i);
         return drawn;
     }
                    

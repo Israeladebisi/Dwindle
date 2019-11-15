@@ -163,12 +163,12 @@ public class DifficultySelect extends javax.swing.JFrame {
 
     private void normalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalButtonActionPerformed
         // TODO add your handling code here:
-        GUI gui = null;
+        EventGUI gui = null;
         Stats.health = 10;
         Stats.dayLimit = 5;
         Stats.resources = 10;
         try {
-            gui = new GUI();
+            gui = new EventGUI();
         } catch (IOException ex) {
             Logger.getLogger(DifficultySelect.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -178,13 +178,13 @@ public class DifficultySelect extends javax.swing.JFrame {
 
     private void hardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hardButtonActionPerformed
         // TODO add your handling code here:
-        GUI gui = null;
+        EventGUI gui = null;
         Stats.health = 5;
         Stats.dayLimit = 10;
         Stats.resources = 6;
 
         try {
-            gui = new GUI();
+            gui = new EventGUI();
         } catch (IOException ex) {
             Logger.getLogger(DifficultySelect.class.getName()).log(Level.SEVERE, null, ex);
         }
