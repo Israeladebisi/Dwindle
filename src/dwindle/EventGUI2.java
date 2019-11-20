@@ -9,6 +9,9 @@ public class EventGUI2 extends javax.swing.JFrame {
     /**
      * Creates new form GUI2
      */
+    
+    GameOverGUI ggui = null;
+    
     public EventGUI2() {
         initComponents();
 
@@ -44,32 +47,6 @@ public class EventGUI2 extends javax.swing.JFrame {
         
         jLabel3.setText("You have " + word +" "+ EventMechanics.val + " " + EventMechanics.factor);
         
-        /*     
-        switch (EventGUI.decision) {
-            case 1:
-                reactionText.setText(EventDeck.currentCard.getReaction1());
-                Stats.resources = Stats.resources/2;
-                break;
-            case 2:
-                reactionText.setText(EventDeck.currentCard.getReaction2());
-                Stats.resources--;
-                break;
-            case 3:
-                reactionText.setText(EventDeck.currentCard.getReaction3());
-                Stats.resources++;
-                break;
-            case 4:
-                reactionText.setText(EventDeck.currentCard.getReaction4());
-                Stats.resources = Stats.resources*2;
-                break;
-            default:
-                break;
-        }
-        */
-        /*
-            Diplay updates
-        */
-        //jLabel3.setText("You have...");  
     }
 
     /**
@@ -230,10 +207,16 @@ public class EventGUI2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        ScavengeGUI scgui= new ScavengeGUI();
-        scgui.setVisible(true);
-        dispose();
+        if(Stats.health <= 0){
+            ggui = new GameOverGUI();
+            ggui.setVisible(true);
+            dispose();
+        }
+        else{
+            ScavengeGUI scgui= new ScavengeGUI();
+            scgui.setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

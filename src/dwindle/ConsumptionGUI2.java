@@ -35,16 +35,11 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
             jTextArea1.setText("Thankfully, you have enough suppplies. But they are beginning to dwindle..");
         }
         else{
-            if(Stats.health <= 4){
-                ggui = new GameOverGUI();
-                dispose();
-            }
-            else{
-                int temp = Math.abs(Stats.resources - 4);
-                Stats.health -= temp;
-                Stats.resources = 0;    
-                jTextArea1.setText("Not enough....never enough, but you must continue...");
-            }
+            int temp = Math.abs(Stats.resources - 4);
+            Stats.health -= temp;
+            Stats.resources = 0;    
+            jTextArea1.setText("Not enough....never enough, but you must continue...");
+
         }
         
         resourceLabel.setText("Resources: " + Stats.resources);
@@ -177,7 +172,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
         EventGUI gui = null;
         GameOverGUI ggui = null;
 
-        if(Stats.dayLimit != Stats.day){
+        if(Stats.dayLimit != Stats.day && Stats.health > 0){
             try {
                 gui = new EventGUI();
             } catch (IOException ex) {
@@ -188,6 +183,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
         }
         else{
             ggui = new GameOverGUI();
+            ggui.setVisible(true);
             dispose();
         }
     }//GEN-LAST:event_nextDayButtonActionPerformed

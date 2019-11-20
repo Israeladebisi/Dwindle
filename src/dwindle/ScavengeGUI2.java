@@ -8,6 +8,9 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
     /**
      * Creates new form ScavengeGUI2
      */
+    
+    GameOverGUI ggui = null;
+    
     public ScavengeGUI2() {
         initComponents();
   
@@ -137,10 +140,16 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        ConsumptionGUI cgui = new ConsumptionGUI();
+        if(Stats.health <= 0){
+            ggui = new GameOverGUI();
+            ggui.setVisible(true);
+            dispose();
+        }
+        else{
+            ConsumptionGUI cgui = new ConsumptionGUI();
         cgui.setVisible(true);
         dispose();
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
