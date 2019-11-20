@@ -15,10 +15,10 @@ public class EventGUI2 extends javax.swing.JFrame {
         /*
             Update Stats
         */
-        resources.setText("Resources: " + Stats.resources);
-        resourceDice.setText("Resource Dice: " + Stats.resourceDice);
-        playerHealth.setText("Player Health: " + Stats.health);
-        day.setText("Day: " + Stats.day);
+        resourceLabel.setText("Resources: " + Stats.resources);
+        resourceDieLabel.setText("Resource Dice: " + Stats.resourceDice);
+        healthLabel.setText("Player Health: " + Stats.health);
+        dayLabel.setText("Day: " + Stats.day);
         
         if(EventGUI.decision == 1){
             reactionText.setText(EventDeck.currentCard.getReaction1());

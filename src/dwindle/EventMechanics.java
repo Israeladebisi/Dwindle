@@ -7,10 +7,11 @@ package dwindle;
 public class EventMechanics {
     public static String factor;
     public static int val;
-    
+   
     public void Choice1(){
-        factor = EventCard.mech1;
-        val = EventCard.mechAmount1;
+        //factor = EventCard.getMech1();
+        factor = EventDeck.currentCard.mech1;
+        val = EventDeck.currentCard.mechAmount1;
         
         if("Health".equals(factor)){
             if(val < 0){
@@ -31,8 +32,8 @@ public class EventMechanics {
     }
     
     public void Choice2(){
-        factor = EventCard.mech2;
-        val = EventCard.mechAmount2;
+        factor = EventDeck.currentCard.mech2;
+        val = EventDeck.currentCard.mechAmount2;
         
         if("Health".equals(factor)){
             if(val < 0){
@@ -53,8 +54,8 @@ public class EventMechanics {
     }
     
     public void Choice3(){
-        factor = EventCard.mech3;
-        val = EventCard.mechAmount3;
+        factor = EventDeck.currentCard.mech3;
+        val = EventDeck.currentCard.mechAmount3;
         
         if("Health".equals(factor)){
             if(val < 0){
@@ -75,8 +76,8 @@ public class EventMechanics {
     }
     
     public void Choice4(){
-        factor = EventCard.mech4;
-        val = EventCard.mechAmount4;
+        factor = EventDeck.currentCard.mech4;
+        val = EventDeck.currentCard.mechAmount4;
         
         if("Health".equals(factor)){
             if(val < 0){

@@ -19,15 +19,15 @@ public class EventCard{
     public String reaction2 = "";
     public String reaction3 = "";
     public String reaction4 = "";
-    public static int mechAmount1 = 0;
-    public static int mechAmount2 = 0;
-    public static int mechAmount3 = 0;
-    public static int mechAmount4 = 0;
-    public static String mech1 = "";
-    public static String mech2 = "";
-    public static String mech3 = "";
-    public static String mech4 = "";
-    public static String triggerWords = "";
+    public int mechAmount1 = 0;
+    public int mechAmount2 = 0;
+    public int mechAmount3 = 0;
+    public int mechAmount4 = 0;
+    public String mech1 = "";
+    public String mech2 = "";
+    public String mech3 = "";
+    public String mech4 = "";
+    public String triggerWords = "";
     
     public EventCard(BufferedReader Buff)throws IOException{
 
@@ -109,7 +109,7 @@ public class EventCard{
     public String getMech4(){
         return mech4;
     }  
-    public static String getTriggerWords(){
+    public String getTriggerWords(){
         return triggerWords;
     }   
 }
