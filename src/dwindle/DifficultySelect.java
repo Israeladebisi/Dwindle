@@ -97,10 +97,10 @@ public class DifficultySelect extends javax.swing.JFrame {
         jLabel2.setText("Start at 5 Health");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Survive 10 Days");
+        jLabel5.setText("Survive 8 Days");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setText("Start with 6 Resources");
+        jLabel7.setText("Start with 4 Resources");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,8 +181,8 @@ public class DifficultySelect extends javax.swing.JFrame {
         // TODO add your handling code here:
         EventGUI gui = null;
         Stats.health = 5;
-        Stats.dayLimit = 10;
-        Stats.resources = 6;
+        Stats.dayLimit = 8;
+        Stats.resources = 4;
 
         try {
             gui = new EventGUI();

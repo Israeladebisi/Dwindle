@@ -12,19 +12,22 @@ public class InstructionScreen extends javax.swing.JFrame {
     public InstructionScreen() {
         initComponents();
         
-        String instructions = "You are surviving an apocolyptic situation where\n" +
-                                "society has collapsed. Can you hold onto your\n" +
-                                "morality while making it to the end?\n" +
+        String instructions = "You are surviving an apocolyptic situation where society has \n" +
+                                "collapsed. Can you make your resources last, or will your\n" +
+                                "life slowly dwindle away in the end?\n" +
                                 "\n" +
                                 "There are three phases:\n" +
-                                "Event Phase: A story based scenario where your luck\n" +
-                                "	and morality will be tested\n" +
+                                "Event Phase: A story based scenario where your luck and\n" +
+                                "        morality will be tested. You will mostly lose\n" +
+                                "        health and resources here.\n" +
+                                "\n" +
                                 "Scavenge Phase: A consistent stage where you can\n" +
-                                "	gather the resources you need to\n" +
-                                "	survive\n" +
+                                "        gather the resources you need to survive.\n" +   
+                                "        It depends on how much you're ready to risk.\n" +
+                                "\n" +
                                 "Consumption Phase: A regular usage of your resources\n" +
-                                "	For each resource you lack, you will\n" +
-                                "	take damage to your health.";
+                                "        Four is what you need each cycle, and you will\n" +
+                                "        take damage to your health for each one missing.";
         
         jTextArea1.setText(instructions);
     }

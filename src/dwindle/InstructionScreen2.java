@@ -11,12 +11,18 @@ public class InstructionScreen2 extends javax.swing.JFrame {
     public InstructionScreen2() {
         initComponents();
         
-        String instructions = "Resources: you need these to feed yourself at the end\n" +
-                              "	of each day\n" +
-                                "Resource DIce: you may roll these dice to increase the\n" +
-                                "	amount of resources you have. Some\n" +
-                                "	events will specifically call on a \n" +
-                                "	number of resource dice.\n";
+        String instructions = "Resources: each cycle you need four of these to feed yourself\n" +
+                              "\n" +
+                              "Resource Dice: you may roll these dice to increase the amount\n" +
+                              "         of resources you have. If an event causes you to lose\n" +
+                              "         resources you don't have, you lose health for the\n" +
+                              "         remainder.\n" +
+                              "\n" +
+                              "Health: Rarely increases. If this value is zero or lower,\n" +
+                              "        you lose the game.\n" +
+                              "\n" +
+                              "Day: You must survive a number of day cycles specific\n" +
+                              "         to the difficulty setting.";
         jTextArea1.setText(instructions);
     }
 
