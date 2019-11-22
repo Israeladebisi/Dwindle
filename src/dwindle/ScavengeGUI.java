@@ -12,10 +12,10 @@ public class ScavengeGUI extends javax.swing.JFrame {
     public ScavengeGUI() {
         initComponents();
         
-        resources.setText("Resources: " + Stats.resources);
-        resourceDice.setText("Resource Dice: " + Stats.resourceDice);
-        playerHealth.setText("Health: " + Stats.health);
-        day.setText("Day: " + Stats.day);
+        resources.setText("Resources: " + Stats.getResources());
+        resourceDice.setText("Resource Dice: " + Stats.getResourceDice());
+        playerHealth.setText("Health: " + Stats.getHealth());
+        day.setText("Day: " + Stats.getDay());
         
     }
     

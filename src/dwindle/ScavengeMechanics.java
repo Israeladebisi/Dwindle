@@ -15,7 +15,7 @@ public class ScavengeMechanics {
         amount = (int) (Math.random()*2+1);
         
         if(chance <= 8){
-            Stats.resourceDice += amount;
+            Stats.setResourceDice(amount);
         }
         else{
             amount = 0;
@@ -30,7 +30,7 @@ public class ScavengeMechanics {
         amount = (int) (Math.random()*5+1);
         
         if(chance <= 5){
-            Stats.resourceDice += amount;
+            Stats.setResourceDice(amount);
         }
         else{
             amount = 0;
@@ -45,7 +45,7 @@ public class ScavengeMechanics {
         amount = (int) (Math.random()*10+1);
         
         if(chance <= 2){
-            Stats.resourceDice += amount;
+            Stats.setResourceDice(amount);
         }
         else{
             amount = 0;
@@ -56,7 +56,7 @@ public class ScavengeMechanics {
         100% regain 1 Health
     */
     public void restMech(){
-        Stats.health += 1;
+        Stats.setHealth(1);
         amount = 999;
     }  
 }

@@ -17,10 +17,10 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
         /*
             Show global variables
         */
-        resourcesLabel.setText("Resources: " + Stats.resources);
-        resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);
+        resourcesLabel.setText("Resources: " + Stats.getResources());
+        resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
+        healthLabel.setText("Health: " + Stats.getHealth());
+        dayLabel.setText("Day: " + Stats.getDay());
         
         if(ScavengeMechanics.amount == 0){
             jTextArea1.setText("Despite hours of effort, you have gained mothing from your time. +0 Resource Dice.");
