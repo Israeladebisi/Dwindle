@@ -14,7 +14,7 @@ public class ScavengeGUI extends javax.swing.JFrame {
         
         resources.setText("Resources: " + Stats.resources);
         resourceDice.setText("Resource Dice: " + Stats.resourceDice);
-        playerHealth.setText("Player Health: " + Stats.health);
+        playerHealth.setText("Health: " + Stats.health);
         day.setText("Day: " + Stats.day);
         
     }

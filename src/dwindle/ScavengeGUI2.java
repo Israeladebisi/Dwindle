@@ -19,7 +19,7 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
         */
         resourcesLabel.setText("Resources: " + Stats.resources);
         resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Player Health: " + Stats.health);
+        healthLabel.setText("Health: " + Stats.health);
         dayLabel.setText("Day: " + Stats.day);
         
         if(ScavengeMechanics.amount == 0){

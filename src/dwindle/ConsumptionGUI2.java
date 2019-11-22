@@ -26,7 +26,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
         
         resourceLabel.setText("Resources: " + Stats.resources);
         resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Player Health: " + Stats.health);
+        healthLabel.setText("Health: " + Stats.health);
         dayLabel.setText("Day: " + Stats.day);
         
         
