@@ -165,9 +165,9 @@ public class DifficultySelect extends javax.swing.JFrame {
     private void normalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalButtonActionPerformed
         // TODO add your handling code here:
         EventGUI gui = null;
-        Stats.health = 10;
-        Stats.dayLimit = 5;
-        Stats.resources = 10;
+        Stats.setHealth(10);
+        Stats.setDayLimit(5);
+        Stats.setResources(10);
         try {
             gui = new EventGUI();
         } catch (IOException ex) {
@@ -180,9 +180,9 @@ public class DifficultySelect extends javax.swing.JFrame {
     private void hardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hardButtonActionPerformed
         // TODO add your handling code here:
         EventGUI gui = null;
-        Stats.health = 5;
-        Stats.dayLimit = 8;
-        Stats.resources = 4;
+        Stats.setHealth(5);
+        Stats.setDayLimit(8);
+        Stats.setResources(4);
 
         try {
             gui = new EventGUI();

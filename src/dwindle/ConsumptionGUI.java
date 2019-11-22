@@ -171,9 +171,9 @@ public class ConsumptionGUI extends javax.swing.JFrame {
 
         Random rand = new Random();
         if(Stats.getResourceDice() > 0){
-            Stats.setResourceDice(-1);
+            Stats.addResourceDice(-1);
             int incr = (int) (Math.random()*6+1);
-            Stats.setResources(incr);
+            Stats.addResources(incr);
             
             //update stats on GUI
             resourceLabel.setText("Resources: " + Stats.getResources());

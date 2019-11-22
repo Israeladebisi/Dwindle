@@ -47,26 +47,54 @@ public class Stats {
         setters
     */
     public static int setDay(int var){
-        day += var;
+        day = var;
         return day;
     }
     
     public static int setDayLimit(int var){
-        dayLimit += var;
+        dayLimit = var;
         return dayLimit;
     }
     
     public static int setHealth(int var){
-        health += var;
+        health = var;
         return health;
     }
     
     public static int setResources(int var){
-        resources += var;
+        resources = var;
         return resources;
     }
     
     public static int setResourceDice(int var){
+        resourceDice = var;
+        return resourceDice;
+    }
+    
+    /*
+        adders
+    */
+    public static int addDay(int var){
+        day += var;
+        return day;
+    }
+    
+    public static int addDayLimit(int var){
+        dayLimit += var;
+        return dayLimit;
+    }
+    
+    public static int addHealth(int var){
+        health += var;
+        return health;
+    }
+    
+    public static int addResources(int var){
+        resources += var;
+        return resources;
+    }
+    
+    public static int addResourceDice(int var){
         resourceDice += var;
         return resourceDice;
     }
