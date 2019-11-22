@@ -16,10 +16,10 @@ public class ConsumptionGUI extends javax.swing.JFrame {
         initComponents();
         
         // display player stats
-        resourceLabel.setText("Resources: " + Stats.resources);
-        resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);     
+        resourceLabel.setText("Resources: " + Stats.getResources());
+        resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
+        healthLabel.setText("Health: " + Stats.getHealth());
+        dayLabel.setText("Day: " + Stats.getDay());     
     }
 
     /**
@@ -170,14 +170,14 @@ public class ConsumptionGUI extends javax.swing.JFrame {
     private void eatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eatButtonActionPerformed
 
         Random rand = new Random();
-        if(Stats.resourceDice > 0){
-            Stats.resourceDice--;
+        if(Stats.getResourceDice() > 0){
+            Stats.setResourceDice(-1);
             int incr = (int) (Math.random()*6+1);
-            Stats.resources += incr;
+            Stats.setResources(incr);
             
             //update stats on GUI
-            resourceLabel.setText("Resources: " + Stats.resources);
-            resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
+            resourceLabel.setText("Resources: " + Stats.getResources());
+            resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
             jLabel4.setText("You have gained " + incr + " resources.");
         }
         else{

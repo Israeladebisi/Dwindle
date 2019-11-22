@@ -20,6 +20,54 @@ public class Stats {
     public static int day;
     public static int dayLimit;
     
-    //invisible and undisclosed morality variable
-    public static int karma;
+    /*
+        getters
+    */
+    public static int getDay(){
+        return day;
+    }
+    
+    public static int getDayLimit(){
+        return dayLimit;
+    }
+    
+    public static int getHealth(){
+        return health;
+    }
+    
+    public static int getResources(){
+        return resources;
+    }
+    
+    public static int getResourceDice(){
+        return resourceDice;
+    }
+    
+    /*
+        setters
+    */
+    public static int setDay(int var){
+        day += var;
+        return day;
+    }
+    
+    public static int setDayLimit(int var){
+        dayLimit += var;
+        return dayLimit;
+    }
+    
+    public static int setHealth(int var){
+        health += var;
+        return health;
+    }
+    
+    public static int setResources(int var){
+        resources += var;
+        return resources;
+    }
+    
+    public static int setResourceDice(int var){
+        resourceDice += var;
+        return resourceDice;
+    }
 }

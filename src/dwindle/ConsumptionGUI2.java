@@ -24,13 +24,12 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
         EventGUI gui = null;
         GameOverGUI ggui = null;
         
-        resourceLabel.setText("Resources: " + Stats.resources);
-        resourceDiceLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);
-        
-        
-        if(Stats.resources >= 4){
+        resourceLabel.setText("Resources: " + Stats.getResources());
+        resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
+        healthLabel.setText("Health: " + Stats.getHealth());
+        dayLabel.setText("Day: " + Stats.getDay());     
+                
+        if(Stats.getResources() >= 4){
             Stats.resources -= 4;
             jTextArea1.setText("Thankfully, you have enough suppplies. But they are beginning to dwindle..");
         }
