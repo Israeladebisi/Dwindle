@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dwindle;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import java.io.IOException;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,71 +12,20 @@ import static org.junit.Assert.*;
  */
 public class EventMechanicsTest {
     
-    public EventMechanicsTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    EventDeck testDeck;
+    EventCard testCard;
+    String factor = "Health";
+    int value = -2;
     
     @Before
-    public void setUp() {
+    public void EventMechanicsTest() throws IOException{
+        testDeck = new EventDeck();
+        testCard = testDeck.deal();
     }
     
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of Choice1 method, of class EventMechanics.
-     */
     @Test
-    public void testChoice1() {
-        System.out.println("Choice1");
-        EventMechanics instance = new EventMechanics();
-        instance.Choice1();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testAChoice() {
+        assertEquals(factor,testCard.getMech1()); 
+        assertEquals(value,testCard.getMechAmount1());
     }
-
-    /**
-     * Test of Choice2 method, of class EventMechanics.
-     */
-    @Test
-    public void testChoice2() {
-        System.out.println("Choice2");
-        EventMechanics instance = new EventMechanics();
-        instance.Choice2();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of Choice3 method, of class EventMechanics.
-     */
-    @Test
-    public void testChoice3() {
-        System.out.println("Choice3");
-        EventMechanics instance = new EventMechanics();
-        instance.Choice3();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of Choice4 method, of class EventMechanics.
-     */
-    @Test
-    public void testChoice4() {
-        System.out.println("Choice4");
-        EventMechanics instance = new EventMechanics();
-        instance.Choice4();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }
