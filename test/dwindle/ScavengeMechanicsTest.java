@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class ScavengeMechanicsTest {
 
     @Test
-    public void testRestMech() {
+    public void testRestMech(){
         Stats.setHealth(1);      
         assertEquals(1,Stats.getHealth());
     }

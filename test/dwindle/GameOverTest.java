@@ -23,7 +23,7 @@ public class GameOverTest {
     @Test
     public void testGameOverCheck() {
         System.out.println("gameOverCheck");
-        String expResult = "You survived!";
+        String expResult = "But You Survived!";
         String result = GameOver.gameOverCheck();
         assertEquals(expResult, result);
     }   
