@@ -24,6 +24,7 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
         EventGUI gui = null;
         GameOverGUI ggui = null;
         
+        //Update displayed stats on GUI
         resourceLabel.setText("Resources: " + Stats.getResources());
         resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
         healthLabel.setText("Health: " + Stats.getHealth());
@@ -31,17 +32,16 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
                 
         if(Stats.getResources() >= 4){
             Stats.addResources(-4);
-            jTextArea1.setText("Thankfully, you have enough suppplies. But they are beginning to dwindle..");
+            jTextArea1.setText("Thankfully, you have enough supplies. But they are beginning to dwindle...");
         }
         else{
             int temp = Math.abs(Stats.addResources(-4));
-            Stats.addHealth(-temp);
-            
+            Stats.reduceHealth(temp);         
             Stats.setResources(0);  
             jTextArea1.setText("Not enough....never enough, but you must continue...");
-
         }
         
+        //update stats
         resourceLabel.setText("Resources: " + Stats.getResources());
         healthLabel.setText("Player Health: " + Stats.getHealth());
         

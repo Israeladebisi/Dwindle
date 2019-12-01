@@ -21,21 +21,21 @@ public class EventGUI extends javax.swing.JFrame {
         
         EventDeck.currentCard = Dwindle.deck.deal();
         
-        Stats.day++;
+        Stats.increaseDay();
         
         //Update EventGUI Information
-        resourceLabel.setText("Resources: " + Stats.resources);
-        resourceDieLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);
+        resourceLabel.setText("Resources: " + Stats.getResources());
+        resourceDieLabel.setText("Resource Dice: " + Stats.getResourceDice());
+        healthLabel.setText("Health: " + Stats.getHealth());
+        dayLabel.setText("Day: " + Stats.getDay());
         
         jTextArea1.setText(EventDeck.currentCard.getStory());
         choice1Button.setText(EventDeck.currentCard.getOption1());
         choice2Button.setText(EventDeck.currentCard.getOption2());
         choice3Button.setText(EventDeck.currentCard.getOption3());
-        choice4Button.setText(EventDeck.currentCard.getOption4());
-        
+        choice4Button.setText(EventDeck.currentCard.getOption4());       
     }
+    
     EventMechanics eventMech = new EventMechanics();
     /**
      * This method is called from within the constructor to initialize the form.

@@ -22,14 +22,14 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
         healthLabel.setText("Health: " + Stats.getHealth());
         dayLabel.setText("Day: " + Stats.getDay());
         
-        if(ScavengeMechanics.amount == 0){
+        if(ScavengeMechanics.getAmount() == 0){
             jTextArea1.setText("Despite hours of effort, you have gained mothing from your time. +0 Resource Dice.");
         }
-        else if(ScavengeMechanics.amount == 999){
+        else if(ScavengeMechanics.getAmount() == 999){
             jTextArea1.setText("Sometimes the best course of action is to rest. +1 Health");
         }
         else{
-            jTextArea1.setText("You struggled, took risks, and fought to survive. +" + ScavengeMechanics.amount + " Resource Dice.");
+            jTextArea1.setText("You struggled, took risks, and fought to survive. +" + ScavengeMechanics.getAmount() + " Resource Dice.");
         }
     }
 
@@ -141,7 +141,7 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(Stats.health <= 0){
+        if(Stats.getHealth() <= 0){
             ggui = new GameOverGUI();
             ggui.setVisible(true);
             dispose();

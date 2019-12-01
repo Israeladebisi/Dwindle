@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Yu Tsai Su and Israel Adebisi
+ * @author Israel
  */
 public class ScavengeMechanicsTest {
 

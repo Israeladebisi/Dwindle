@@ -31,6 +31,7 @@ public class EventCard{
     
     public EventCard(BufferedReader Buff)throws IOException{
 
+        //Each variable is assigned to each line of the read in file
         title = Buff.readLine();
         story = Buff.readLine();
         option1 = Buff.readLine();

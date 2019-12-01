@@ -4,8 +4,7 @@ package dwindle;
  * @author YuTsai
  */
 public class ScavengeMechanics {
-    public static int amount;
-    
+    public static int amount;  
     
     /*
         80% chance of success, 2+1 max able to find
@@ -58,5 +57,12 @@ public class ScavengeMechanics {
     public void restMech(){
         Stats.setHealth(1);
         amount = 999;
-    }  
+    } 
+    
+    /*
+        getter
+    */
+    public static int getAmount(){
+        return amount;
+    }
 }

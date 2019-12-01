@@ -163,8 +163,9 @@ public class DifficultySelect extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void normalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_normalButtonActionPerformed
-        // TODO add your handling code here:
         EventGUI gui = null;
+        
+        //update stats
         Stats.setHealth(10);
         Stats.setDayLimit(5);
         Stats.setResources(10);
@@ -178,8 +179,9 @@ public class DifficultySelect extends javax.swing.JFrame {
     }//GEN-LAST:event_normalButtonActionPerformed
 
     private void hardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hardButtonActionPerformed
-        // TODO add your handling code here:
         EventGUI gui = null;
+        
+        //update stats
         Stats.setHealth(5);
         Stats.setDayLimit(8);
         Stats.setResources(4);

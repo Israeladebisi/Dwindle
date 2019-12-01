@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dwindle;
 
 import java.io.IOException;
@@ -11,7 +6,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Owner
+ * @author Israel
  */
 public class EventDeckTest {
     
@@ -24,7 +19,7 @@ public class EventDeckTest {
  
     @Test
     public void DealShouldDrawFromOneDeck() {
-        //Test shows Entire Game uses only one deck because of static ArrayList Deck
+        //Test shows Entire Game uses only one deck because of the static ArrayList Deck
         System.out.println("deal");
         EventCard expResult = testDeck.deal();
         EventCard result = anotherDeck.deal();

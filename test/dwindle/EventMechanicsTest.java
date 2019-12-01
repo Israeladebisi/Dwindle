@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Owner
+ * @author Israel
  */
 public class EventMechanicsTest {
     

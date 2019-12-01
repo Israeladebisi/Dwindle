@@ -11,8 +11,7 @@ public class Stats {
     */
     public static int health;
     public static int resources;
-    public static int resourceDice;
-    
+    public static int resourceDice;   
             
     /*
         Cycle Pertinent
@@ -72,10 +71,10 @@ public class Stats {
     }
     
     /*
-        adders
+        Stats increment and decrement methods
     */
-    public static int addDay(int var){
-        day += var;
+    public static int increaseDay(){
+        day ++;
         return day;
     }
     
@@ -84,7 +83,7 @@ public class Stats {
         return dayLimit;
     }
     
-    public static int addHealth(int var){
+    public static int increaseHealth(int var){
         health += var;
         return health;
     }
@@ -97,5 +96,10 @@ public class Stats {
     public static int addResourceDice(int var){
         resourceDice += var;
         return resourceDice;
+    }
+
+    public static int reduceHealth(int var){
+        health -= var;
+        return health;
     }
 }

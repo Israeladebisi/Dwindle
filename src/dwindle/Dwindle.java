@@ -7,6 +7,7 @@ import java.io.IOException;
  */
 public class Dwindle{
     
+    //create game deck
     public static EventDeck deck;
     
     public static void main(String[] args) throws IOException{   

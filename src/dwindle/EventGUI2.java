@@ -9,7 +9,6 @@ public class EventGUI2 extends javax.swing.JFrame {
     /**
      * Creates new form GUI2
      */
-    
     GameOverGUI ggui = null;
     
     public EventGUI2() {
@@ -18,10 +17,10 @@ public class EventGUI2 extends javax.swing.JFrame {
         /*
             Update Stats
         */
-        resourceLabel.setText("Resources: " + Stats.resources);
-        resourceDieLabel.setText("Resource Dice: " + Stats.resourceDice);
-        healthLabel.setText("Health: " + Stats.health);
-        dayLabel.setText("Day: " + Stats.day);
+        resourceLabel.setText("Resources: " + Stats.getResources());
+        resourceDieLabel.setText("Resource Dice: " + Stats.getResourceDice());
+        healthLabel.setText("Health: " + Stats.getHealth());
+        dayLabel.setText("Day: " + Stats.getDay());
         
         if(EventGUI.decision == 1){
             reactionText.setText(EventDeck.currentCard.getReaction1());
@@ -35,18 +34,15 @@ public class EventGUI2 extends javax.swing.JFrame {
         else{
             reactionText.setText(EventDeck.currentCard.getReaction4());
         }
-
-        
+       
         String word = "";
-        if(EventMechanics.val < 0){
+        if(EventMechanics.getValue() < 0){
             word = "lost";
         }
         else{
             word = "gained";
-        }
-        
-        jLabel3.setText("You have " + word +" "+ EventMechanics.val + " " + EventMechanics.factor);
-        
+        }       
+        jLabel3.setText("You have " + word +" "+ EventMechanics.getValue() + " " + EventMechanics.getFactor());      
     }
 
     /**
@@ -167,7 +163,7 @@ public class EventGUI2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(Stats.health <= 0){
+        if(Stats.getHealth() <= 0){
             ggui = new GameOverGUI();
             ggui.setVisible(true);
             dispose();
