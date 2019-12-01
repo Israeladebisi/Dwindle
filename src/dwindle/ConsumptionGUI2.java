@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dwindle;
 
 import java.io.IOException;
@@ -20,9 +15,6 @@ public class ConsumptionGUI2 extends javax.swing.JFrame {
      */
     public ConsumptionGUI2() {
         initComponents();
-        
-        EventGUI gui = null;
-        GameOverGUI ggui = null;
         
         //Update displayed stats on GUI
         resourceLabel.setText("Resources: " + Stats.getResources());

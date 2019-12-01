@@ -10,7 +10,7 @@ public class GameOver {
         String result;
         
         if(Stats.getHealth() > 0 && Stats.getDay() == Stats.getDayLimit()){
-            result = "You survived!";
+            result = "But You Survived!";
         }
         else{
             result = "You died.";

@@ -15,7 +15,7 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
         initComponents();
   
         /*
-            Show global variables
+            Display global variables
         */
         resourcesLabel.setText("Resources: " + Stats.getResources());
         resourceDiceLabel.setText("Resource Dice: " + Stats.getResourceDice());
@@ -29,7 +29,8 @@ public class ScavengeGUI2 extends javax.swing.JFrame {
             jTextArea1.setText("Sometimes the best course of action is to rest. +1 Health");
         }
         else{
-            jTextArea1.setText("You struggled, took risks, and fought to survive. +" + ScavengeMechanics.getAmount() + " Resource Dice.");
+            jTextArea1.setText("You struggled, took risks, and fought to survive. +" 
+                    + ScavengeMechanics.getAmount() + " Resource Dice.");
         }
     }
 

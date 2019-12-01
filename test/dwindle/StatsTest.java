@@ -17,7 +17,7 @@ import org.junit.Test;
 public class StatsTest {
     
     @Before
-    public void createDay (){
+    public void setVariables (){
      Stats.setResourceDice(5);
      Stats.setResources(10);
      Stats.setDay(1);

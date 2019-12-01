@@ -55,7 +55,7 @@ public class ScavengeMechanics {
         100% regain 1 Health
     */
     public void restMech(){
-        Stats.setHealth(1);
+        Stats.increaseHealth(1);
         amount = 999;
     } 
     
