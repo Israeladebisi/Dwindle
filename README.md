@@ -4,13 +4,13 @@ Text-based adventure game
 ## Table of Contents
 - Game Overview
 - Technologies
-- Setup
-- Status
+- Prerequisites
+- Contributors
 
 ## Game Overview
 This is a text-based adventure game where the player chooses their future by selecting from a series of options.
 
-## Technologies Used
+## Technologies
 Project is created with:
 - Java
 - Netbeans IDE version: 8.0.2
