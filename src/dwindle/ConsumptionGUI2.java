@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author YuTsai
+ * @author Israel
  */
 public class ConsumptionGUI2 extends javax.swing.JFrame {
 
